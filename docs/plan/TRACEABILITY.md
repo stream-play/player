@@ -63,3 +63,12 @@ Scenario IDs with `GH` are **derived (not in spec)** from the unnumbered §6 sce
 | TECH-SECURITY | none (audit/decision scope) | none |
 | TECH-UX-REVIEW | none (audit/decision scope) | none |
 | TECH-RELEASE | none (audit/decision scope) | ADR-009 |
+
+## Legacy audit evidence
+
+| Consumer | Evidence | Matrix rows / open questions |
+| --- | --- | --- |
+| TECH-AUDIT-LEGACY | `LEGACY_AUDIT_LEDGER.md` §§1–7 | All live-reconciled capability rows; OQ-002, OQ-009–OQ-021 |
+| TECH-ADR-BASE, TECH-DESIGN-SYSTEM | `LEGACY_AUDIT_LEDGER.md` LA-008–LA-015 | Typography, Icons, themes, assets; OQ-009, OQ-019–OQ-020 |
+| TECH-DOMAIN-* and TECH-POC-PLAYER | `LEGACY_AUDIT_LEDGER.md` LA-001–LA-007, LA-016–LA-017 | Provider, store and playback rows; OQ-010, OQ-014–OQ-015 |
+| TECH-SECURITY, TECH-RELEASE | `LEGACY_AUDIT_LEDGER.md` §4(h-k) | Fixtures, scripts, CI and Cargo rows; OQ-015, OQ-021 |

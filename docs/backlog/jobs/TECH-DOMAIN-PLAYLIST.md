@@ -7,7 +7,7 @@ Define playlist/provider identity, credential references, enabled state and sync
 - Specs: resources/StreamPlay_2_0_Specificaties/guides/DATA_EN_CONTENT_MODELLEN.md; resources/StreamPlay_2_0_Specificaties/schermen/24_24_Playlists_providers.md
 - Design: none — no UI reference required.
 - ADRs: ADR-001, ADR-002, ADR-003, ADR-004, ADR-012
-- Legacy reference: ~/Projects/iptv/README.md (README.md:3 @ 7469f2a): characterize observable domain playlist behavior; use synthetic fixtures.
+- Legacy reference: `~/Projects/iptv` (crates/providers/src/m3u.rs:121 and `crates/providers/src/xtream.rs:92 @ 7469f2a`; player `crates/providers/src/m3u.rs:5 @ 869ce22`): characterize the observable behavior; use synthetic fixtures.
 
 ## Scope
 - In: Define playlist/provider identity, credential references, enabled state and sync result contract for M3U/Xtream. Specify bounded untrusted input and idempotent refresh behavior.

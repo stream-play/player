@@ -7,7 +7,7 @@ Collect POC evidence and seek explicit owner decisions for ADR-001/002/003/004/0
 - Specs: resources/StreamPlay_2_0_Specificaties/guides/BESLISSINGEN_EN_RISICOS.md; resources/StreamPlay_2_0_Specificaties/guides/TECHNISCHE_ARCHITECTUUR.md
 - Design: none — no UI reference required.
 - ADRs: none
-- Legacy reference: ~/Projects/iptv/README.md (README.md:3 @ 7469f2a): characterize observable adr base behavior; use synthetic fixtures.
+- Legacy reference: `~/Projects/iptv` (`crates/desktop/src/app/shell.rs:4 @ 7469f2a`; `crates/playback/src/lib.rs:257 @ 7469f2a`; `crates/store/src/lib.rs:28 @ 7469f2a`; `crates/providers/src/m3u.rs:121 @ 7469f2a`; `crates/desktop/src/app/shell.rs:4 @ 7469f2a`): characterize the observable behavior; use synthetic fixtures.
 
 ## Scope
 - In: Collect POC evidence and seek explicit owner decisions for ADR-001/002/003/004/012. Record the accepted option, rationale, alternatives, licence implications and affected jobs in each ADR.

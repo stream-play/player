@@ -7,7 +7,7 @@ Reconcile the snapshot matrix with the live read-only source, assets, fixtures, 
 - Specs: resources/StreamPlay_2_0_Specificaties/README.md; resources/StreamPlay_2_0_Specificaties/guides/TECHNISCHE_ARCHITECTUUR.md
 - Design: none — no UI reference required.
 - ADRs: none
-- Legacy reference: ~/Projects/iptv/README.md (README.md:3 @ 7469f2a): characterize observable audit legacy behavior; use synthetic fixtures.
+- Legacy reference: `~/Projects/iptv` (`docs/src/pages/audit.md:10 @ 7469f2a`): characterize the observable behavior; use synthetic fixtures.
 
 ## Scope
 - In: Reconcile the snapshot matrix with the live read-only source, assets, fixtures, scripts and subsequent history. Record each changed capability, evidence line and reuse verdict; do not import user content.

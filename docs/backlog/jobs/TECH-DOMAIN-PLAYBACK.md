@@ -7,7 +7,7 @@ Publish player state, session, track, subtitle, PiP and error ports after ADR-00
 - Specs: resources/StreamPlay_2_0_Specificaties/guides/TECHNISCHE_ARCHITECTUUR.md; resources/StreamPlay_2_0_Specificaties/schermen/05_05_Live_TV_player.md
 - Design: none — no UI reference required.
 - ADRs: ADR-001, ADR-002, ADR-003, ADR-004, ADR-012
-- Legacy reference: ~/Projects/iptv/README.md (README.md:3 @ 7469f2a): characterize observable domain playback behavior; use synthetic fixtures. Compare staged ~/Projects/iptv/player/crates/playback/src/controller.rs (crates/playback/src/controller.rs:9 @ 869ce22).
+- Legacy reference: `~/Projects/iptv` (`crates/playback/src/lib.rs:257 @ 7469f2a`): characterize the observable behavior; use synthetic fixtures. Compare staged `crates/playback/src/controller.rs:9 @ 869ce22`.
 
 ## Scope
 - In: Publish player state, session, track, subtitle, PiP and error ports after ADR-002. Provide fake backend and lifecycle tests so navigation can retain one session.

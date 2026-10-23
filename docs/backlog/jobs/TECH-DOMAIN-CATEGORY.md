@@ -7,7 +7,7 @@ Define Category and CategoryMapping identity, normalized provider category refer
 - Specs: resources/StreamPlay_2_0_Specificaties/guides/DATA_EN_CONTENT_MODELLEN.md; resources/StreamPlay_2_0_Specificaties/schermen/31_31_Categorieen_genrebeheer.md
 - Design: none — no UI reference required.
 - ADRs: ADR-001, ADR-002, ADR-003, ADR-004, ADR-012
-- Legacy reference: ~/Projects/iptv/README.md (README.md:3 @ 7469f2a): characterize observable domain category behavior; use synthetic fixtures.
+- Legacy reference: `~/Projects/iptv` (`crates/store/src/live_categories.rs:113 @ 7469f2a`): characterize the observable behavior; use synthetic fixtures.
 
 ## Scope
 - In: Define Category and CategoryMapping identity, normalized provider category references and precedence for Space/manual overrides. Specify dry-run, ordering and refresh survival.

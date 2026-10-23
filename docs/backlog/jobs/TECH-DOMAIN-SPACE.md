@@ -7,7 +7,7 @@ Define stable Space IDs and scoped preferences, favorites and content selection 
 - Specs: resources/StreamPlay_2_0_Specificaties/guides/DATA_EN_CONTENT_MODELLEN.md; resources/StreamPlay_2_0_Specificaties/schermen/21_21_Spaces_overzicht.md
 - Design: none — no UI reference required.
 - ADRs: ADR-001, ADR-002, ADR-003, ADR-004, ADR-012, ADR-005
-- Legacy reference: ~/Projects/iptv/README.md (README.md:3 @ 7469f2a): characterize observable domain space behavior; use synthetic fixtures.
+- Legacy reference: `~/Projects/iptv` (crates/store/src/spaces.rs:12 and `crates/store/src/space_state.rs:5 @ 7469f2a`): characterize the observable behavior; use synthetic fixtures.
 
 ## Scope
 - In: Define stable Space IDs and scoped preferences, favorites and content selection after ADR-005. Provide fake ports, isolation tests and conflict behavior for switch, create, archive and restore.

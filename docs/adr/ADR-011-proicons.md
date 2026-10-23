@@ -13,7 +13,7 @@ Verify the complete ProIcons inventory, licence and semantic mapping.
 
 ## Evidence
 
-- v1: `crates/desktop/src/app/shell.rs:4 @ 7469f2a`. This establishes prior behavior, not v2 approval.
+- Player asset metadata: `crates/desktop/assets/manifest.json:10-18 @ 869ce22` identifies Proicons 4.13.7 and its source pin; `crates/desktop/src/assets.rs:62-65 @ 869ce22` embeds the SVGs (LA-010). The downstream owner-designated source is `resources/proicons @ 1c810f0`; confirm supplied archive correspondence and licence terms.
 - Specs: `resources/StreamPlay_2_0_Specificaties/guides/BESLISSINGEN_EN_RISICOS.md:16` and `resources/StreamPlay_2_0_Specificaties/guides/TECHNISCHE_ARCHITECTUUR.md`.
 - **owner decision in v1, needs confirmation for v2** (`HANDOVER.md:27`): “Use embedded **Asap Sharp** and **Proicons**. The font/icon inventory already exists; do not replace it with emoji, Unicode control glyphs or a runtime CDN.”
 

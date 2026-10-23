@@ -7,7 +7,7 @@ Define EpgProgram intervals, source provenance, channel mapping confidence and m
 - Specs: resources/StreamPlay_2_0_Specificaties/guides/DATA_EN_CONTENT_MODELLEN.md; resources/StreamPlay_2_0_Specificaties/schermen/06_06_Volledige_EPG.md
 - Design: none — no UI reference required.
 - ADRs: ADR-001, ADR-002, ADR-003, ADR-004, ADR-012
-- Legacy reference: ~/Projects/iptv/README.md (README.md:3 @ 7469f2a): characterize observable domain epg behavior; use synthetic fixtures.
+- Legacy reference: `~/Projects/iptv` (`crates/providers/src/xmltv.rs:33 @ 7469f2a`): characterize the observable behavior; use synthetic fixtures.
 
 ## Scope
 - In: Define EpgProgram intervals, source provenance, channel mapping confidence and manual override. Preserve UTC storage and timezone display semantics.

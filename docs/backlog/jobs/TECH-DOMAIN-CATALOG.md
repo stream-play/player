@@ -7,7 +7,7 @@ Define canonical CatalogItem, SourceItem and ContentSource identities with conse
 - Specs: resources/StreamPlay_2_0_Specificaties/guides/DATA_EN_CONTENT_MODELLEN.md; resources/StreamPlay_2_0_Specificaties/guides/TECHNISCHE_ARCHITECTUUR.md
 - Design: none — no UI reference required.
 - ADRs: ADR-001, ADR-002, ADR-003, ADR-004, ADR-012
-- Legacy reference: ~/Projects/iptv/README.md (README.md:3 @ 7469f2a): characterize observable domain catalog behavior; use synthetic fixtures.
+- Legacy reference: `~/Projects/iptv` (`crates/store/src/lib.rs:30 @ 7469f2a`; player `crates/store/tests/catalogue.rs:5 @ 869ce22`): characterize the observable behavior; use synthetic fixtures.
 
 ## Scope
 - In: Define canonical CatalogItem, SourceItem and ContentSource identities with conservative matching and provenance. Expose source selection and merge/separate contracts without remote metadata assumptions.
