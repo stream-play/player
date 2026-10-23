@@ -1,13 +1,13 @@
 # TECH-DOMAIN-PLAYBACK — Domain Playback
 
 ## Goal
-Deliver the domain playback contract for StreamPlay 2.0. Establish testable behavior and reviewable boundaries before dependent jobs use it.
+Publish player state, session, track, subtitle, PiP and error ports after ADR-002. The output establishes an independently reviewable contract for downstream jobs.
 
 ## Inputs
 - Specs: resources/StreamPlay_2_0_Specificaties/guides/TECHNISCHE_ARCHITECTUUR.md; resources/StreamPlay_2_0_Specificaties/schermen/05_05_Live_TV_player.md
 - Design: none — no UI reference required.
 - ADRs: ADR-001, ADR-002, ADR-003, ADR-004, ADR-012
-- Legacy reference: ~/Projects/iptv/README.md (README.md:1 @ 7469f2a): characterize observable domain playback behavior; use synthetic fixtures. Compare staged ~/Projects/iptv/player/crates/playback/src/controller.rs (crates/playback/src/controller.rs:1 @ 869ce22).
+- Legacy reference: ~/Projects/iptv/README.md (README.md:3 @ 7469f2a): characterize observable domain playback behavior; use synthetic fixtures. Compare staged ~/Projects/iptv/player/crates/playback/src/controller.rs (crates/playback/src/controller.rs:9 @ 869ce22).
 
 ## Scope
 - In: Publish player state, session, track, subtitle, PiP and error ports after ADR-002. Provide fake backend and lifecycle tests so navigation can retain one session.
@@ -16,7 +16,7 @@ Deliver the domain playback contract for StreamPlay 2.0. Establish testable beha
 ## Behavior (BDD)
 - Feature file(s): features/live_player.feature
 - Scenarios to make pass: DOM-LIVE_PLAYER-INV-01
-- Additional scenarios (from the 10 categories in BDD_STRATEGIE.md) that this job must add: happy path, empty data, partial error/offline, unavailable capability, boundary data, keyboard/a11y, restoration/persistence, multispace isolation, concurrency/undo where relevant, migration compatibility.
+- Additional scenarios (from the 10 categories in BDD_STRATEGIE.md) that this job must add: happy path — satisfy the listed invariant; boundary data — verify IDs and conflicts; partial error/offline — retain valid state
 
 ## Domain contract
 Indicative PlayerBackend/PlayerSession ports use stable source ID, track selection and state events. A player session is independent of a screen component; unsupported capabilities are explicit. Names are indicative. Apply DATA_EN_CONTENT_MODELLEN.md invariants for stable IDs, provenance, Space isolation and versioned conflicts where relevant.
@@ -30,6 +30,7 @@ Live-player BDD, backend contract tests, fmt, clippy, audit and security review.
 ## Definition of done
 - [ ] Red test evidence captured before implementation.
 - [ ] Named and additional scenarios pass with synthetic fixtures.
+- [ ] Three-theme screenshots are not applicable because this job delivers no UI.
 - [ ] No P0/P1 review issue remains.
 - [ ] Related docs, traceability and ADR evidence are updated.
 

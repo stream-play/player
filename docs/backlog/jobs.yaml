@@ -15,7 +15,7 @@ jobs:
   skipReasons:
     ux: No user-facing change
     ui-design: No user-facing change
-  blockedByAdr: &id001 []
+  blockedByAdr: []
 - id: TECH-POC-GUI
   title: Poc Gui
   file: docs/backlog/jobs/TECH-POC-GUI.md
@@ -32,7 +32,7 @@ jobs:
   - ui-design
   - code
   skipReasons: {}
-  blockedByAdr: *id001
+  blockedByAdr: []
 - id: TECH-POC-PLAYER
   title: Poc Player
   file: docs/backlog/jobs/TECH-POC-PLAYER.md
@@ -49,7 +49,7 @@ jobs:
   skipReasons:
     ux: No user-facing change
     ui-design: No user-facing change
-  blockedByAdr: *id001
+  blockedByAdr: []
 - id: TECH-ADR-BASE
   title: Adr Base
   file: docs/backlog/jobs/TECH-ADR-BASE.md
@@ -68,7 +68,7 @@ jobs:
   skipReasons:
     ux: No user-facing change
     ui-design: No user-facing change
-  blockedByAdr: *id001
+  blockedByAdr: []
 - id: TECH-RUST-WORKSPACE
   title: Rust Workspace
   file: docs/backlog/jobs/TECH-RUST-WORKSPACE.md
@@ -972,7 +972,7 @@ jobs:
   skipReasons:
     ux: No user-facing change
     ui-design: No user-facing change
-  blockedByAdr: *id001
+  blockedByAdr: []
 - id: TECH-SECURITY
   title: Security
   file: docs/backlog/jobs/TECH-SECURITY.md
@@ -991,7 +991,7 @@ jobs:
   skipReasons:
     ux: No user-facing change
     ui-design: No user-facing change
-  blockedByAdr: *id001
+  blockedByAdr: []
 - id: TECH-UX-REVIEW
   title: Ux Review
   file: docs/backlog/jobs/TECH-UX-REVIEW.md
@@ -1038,7 +1038,7 @@ jobs:
   - ui-design
   - code
   skipReasons: {}
-  blockedByAdr: *id001
+  blockedByAdr: []
 - id: TECH-RELEASE
   title: Release
   file: docs/backlog/jobs/TECH-RELEASE.md

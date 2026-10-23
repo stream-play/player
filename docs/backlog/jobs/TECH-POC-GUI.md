@@ -1,22 +1,22 @@
 # TECH-POC-GUI — Poc Gui
 
 ## Goal
-Deliver the poc gui contract for StreamPlay 2.0. Establish testable behavior and reviewable boundaries before dependent jobs use it.
+Build isolated throwaway native GUI probes for titlebar controls, video embedding, accessibility, DPI, keyboard focus and screenshots on two candidate stacks. The output establishes an independently reviewable contract for downstream jobs.
 
 ## Inputs
 - Specs: resources/StreamPlay_2_0_Specificaties/guides/TECHNISCHE_ARCHITECTUUR.md; resources/StreamPlay_2_0_Specificaties/guides/BUILD_EN_STYLE_GUIDE.md
 - Design: resources/StreamPlay_2_0_alle_33_designs/00_Overzicht_33_schermen.jpg — use cross-screen shell hierarchy and state treatment; ignore fictional media, unsupported controls and pixel-perfect placement.
 - ADRs: none
-- Legacy reference: ~/Projects/iptv/crates/desktop/src/app/shell.rs (crates/desktop/src/app/shell.rs:1 @ 7469f2a): characterize observable poc gui behavior; use synthetic fixtures.
+- Legacy reference: ~/Projects/iptv/crates/desktop/src/app/shell.rs (crates/desktop/src/app/shell.rs:4 @ 7469f2a): characterize observable poc gui behavior; use synthetic fixtures.
 
 ## Scope
 - In: Build isolated throwaway native GUI probes for titlebar controls, video embedding, accessibility, DPI, keyboard focus and screenshots on two candidate stacks. Record measurements, platform limits and recommendation for ADR-001/012.
 - Out: No production app shell or final framework selection; do not commit a production workspace.
 
 ## Behavior (BDD)
-- Feature file(s): features/playlist_import.feature
-- Scenarios to make pass: DOM-PLAYLIST_IMPORT-INV-01
-- Additional scenarios (from the 10 categories in BDD_STRATEGIE.md) that this job must add: happy path, empty data, partial error/offline, unavailable capability, boundary data, keyboard/a11y, restoration/persistence, multispace isolation, concurrency/undo where relevant, migration compatibility.
+- Feature file(s): features/appearance.feature
+- Scenarios to make pass: DOM-APPEARANCE-INV-01 for theme behavior; titlebar, DPI and focus require POC evidence.
+- Additional scenarios (from the 10 categories in BDD_STRATEGIE.md) that this job must add: keyboard/a11y — probe focus and screenreader traversal; boundary data — DPI and resize extremes
 
 ## Domain contract
 Indicative probes: WindowHost, VideoSurface and AccessibilityTree. Inputs are viewport/DPI/theme/focus and a fake video surface; report event and screenshot behavior. Names are indicative. Apply DATA_EN_CONTENT_MODELLEN.md invariants for stable IDs, provenance, Space isolation and versioned conflicts where relevant.

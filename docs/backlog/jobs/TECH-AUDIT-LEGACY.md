@@ -1,22 +1,22 @@
 # TECH-AUDIT-LEGACY — Audit Legacy
 
 ## Goal
-Verify the initial SP2-000 capability matrix against the live legacy repository, assets, fixtures and history omitted from the read-only snapshots. Update evidence and open questions without importing private user data.
+Reconcile the snapshot matrix with the live read-only source, assets, fixtures, scripts and subsequent history. The output establishes an independently reviewable contract for downstream jobs.
 
 ## Inputs
 - Specs: resources/StreamPlay_2_0_Specificaties/README.md; resources/StreamPlay_2_0_Specificaties/guides/TECHNISCHE_ARCHITECTUUR.md
 - Design: none — no UI reference required.
 - ADRs: none
-- Legacy reference: ~/Projects/iptv/README.md (README.md:1 @ 7469f2a): characterize observable audit legacy behavior; use synthetic fixtures.
+- Legacy reference: ~/Projects/iptv/README.md (README.md:3 @ 7469f2a): characterize observable audit legacy behavior; use synthetic fixtures.
 
 ## Scope
 - In: Reconcile the snapshot matrix with the live read-only source, assets, fixtures, scripts and subsequent history. Record each changed capability, evidence line and reuse verdict; do not import user content.
 - Out: No application implementation, schema edits, provider account tests or source-tree changes.
 
 ## Behavior (BDD)
-- Feature file(s): features/playlist_import.feature
-- Scenarios to make pass: DOM-PLAYLIST_IMPORT-INV-01
-- Additional scenarios (from the 10 categories in BDD_STRATEGIE.md) that this job must add: happy path, empty data, partial error/offline, unavailable capability, boundary data, keyboard/a11y, restoration/persistence, multispace isolation, concurrency/undo where relevant, migration compatibility.
+- Feature file(s): none — audit evidence and updated capability matrix
+- Scenarios to make pass: none — evidence/acceptance artefact for this job.
+- Additional scenarios (from the 10 categories in BDD_STRATEGIE.md) that this job must add: none — evidence job; verify the named artefact and its acceptance gates
 
 ## Domain contract
 Evidence ledger inputs are snapshot commit, original path/line, live path/line and observed behavior. Output one verdict per capability; no runtime port is implemented. Names are indicative. Apply DATA_EN_CONTENT_MODELLEN.md invariants for stable IDs, provenance, Space isolation and versioned conflicts where relevant.
@@ -29,7 +29,8 @@ Evidence citation audit, matrix/OPEN_QUESTIONS diff and security leak scan; no c
 
 ## Definition of done
 - [ ] Red test evidence captured before implementation.
-- [ ] Named and additional scenarios pass with synthetic fixtures.
+- [ ] Evidence artefact and applicable acceptance checks pass with synthetic fixtures.
+- [ ] Three-theme screenshots are not applicable because this job delivers no UI.
 - [ ] No P0/P1 review issue remains.
 - [ ] Related docs, traceability and ADR evidence are updated.
 

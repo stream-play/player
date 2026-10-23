@@ -1,13 +1,13 @@
 # TECH-DOMAIN-EPG — Domain Epg
 
 ## Goal
-Deliver the domain epg contract for StreamPlay 2.0. Establish testable behavior and reviewable boundaries before dependent jobs use it.
+Define EpgProgram intervals, source provenance, channel mapping confidence and manual override. The output establishes an independently reviewable contract for downstream jobs.
 
 ## Inputs
 - Specs: resources/StreamPlay_2_0_Specificaties/guides/DATA_EN_CONTENT_MODELLEN.md; resources/StreamPlay_2_0_Specificaties/schermen/06_06_Volledige_EPG.md
 - Design: none — no UI reference required.
 - ADRs: ADR-001, ADR-002, ADR-003, ADR-004, ADR-012
-- Legacy reference: ~/Projects/iptv/README.md (README.md:1 @ 7469f2a): characterize observable domain epg behavior; use synthetic fixtures.
+- Legacy reference: ~/Projects/iptv/README.md (README.md:3 @ 7469f2a): characterize observable domain epg behavior; use synthetic fixtures.
 
 ## Scope
 - In: Define EpgProgram intervals, source provenance, channel mapping confidence and manual override. Preserve UTC storage and timezone display semantics.
@@ -16,7 +16,7 @@ Deliver the domain epg contract for StreamPlay 2.0. Establish testable behavior 
 ## Behavior (BDD)
 - Feature file(s): features/epg_mapping.feature
 - Scenarios to make pass: DOM-EPG_MAPPING-INV-01
-- Additional scenarios (from the 10 categories in BDD_STRATEGIE.md) that this job must add: happy path, empty data, partial error/offline, unavailable capability, boundary data, keyboard/a11y, restoration/persistence, multispace isolation, concurrency/undo where relevant, migration compatibility.
+- Additional scenarios (from the 10 categories in BDD_STRATEGIE.md) that this job must add: happy path — satisfy the listed invariant; boundary data — verify IDs and conflicts; partial error/offline — retain valid state
 
 ## Domain contract
 Indicative EpgRepository and GuideMatcher ports use provider/external ID or time range, channel ID and UTC interval. startUtc < endUtc; manual mapping outranks automatic confidence. Names are indicative. Apply DATA_EN_CONTENT_MODELLEN.md invariants for stable IDs, provenance, Space isolation and versioned conflicts where relevant.
@@ -30,6 +30,7 @@ EPG-mapping BDD, interval property tests, parser integration, fmt, clippy, audit
 ## Definition of done
 - [ ] Red test evidence captured before implementation.
 - [ ] Named and additional scenarios pass with synthetic fixtures.
+- [ ] Three-theme screenshots are not applicable because this job delivers no UI.
 - [ ] No P0/P1 review issue remains.
 - [ ] Related docs, traceability and ADR evidence are updated.
 

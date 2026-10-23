@@ -53,7 +53,7 @@ These items require evidence or owner decisions before the listed work starts. N
 ## OQ-007 — MultiView four-stream cap
 
 - Question: MultiView four-stream cap?
-- Evidence: `HANDOVER.md:222; crates/desktop/src/app/multiview.rs:8 @ 7469f2a; resources/StreamPlay_2_0_Specificaties/schermen/19_19_MultiView_dashboard.md`.
+- Evidence: `HANDOVER.md:222; crates/desktop/src/app/multiview.rs:70 @ 7469f2a; resources/StreamPlay_2_0_Specificaties/schermen/19_19_MultiView_dashboard.md`.
 - Options: Keep cap 4; or capability-based cap after POC.
 - Owner-only: yes.
 - Blocks: ADR-008, SP-19-20.
@@ -109,7 +109,7 @@ These items require evidence or owner decisions before the listed work starts. N
 ## OQ-014 — Live source assets and fixtures absent from snapshots
 
 - Question: Live source assets and fixtures absent from snapshots?
-- Evidence: `crates/desktop/assets/README.md:1 @ 7469f2a; HANDOVER.md:82`.
+- Evidence: `crates/desktop/assets/README.md:3 @ 7469f2a; HANDOVER.md:82`.
 - Options: Read-only live audit; or obtain sanitized fixtures and manifest.
 - Owner-only: no.
 - Blocks: TECH-AUDIT-LEGACY, TECH-POC-PLAYER.
@@ -129,3 +129,19 @@ These items require evidence or owner decisions before the listed work starts. N
 - Options: Feature-gate by provider capability; or defer downloads.
 - Owner-only: yes.
 - Blocks: ADR-007, SP-18.
+
+## OQ-013 — SP-04/SP-05 mockup filenames and screen roles
+
+- Question: Are the SP-04 and SP-05 mockup filenames swapped? SP-04’s file depicts a full player, while SP-05’s file depicts the overview hero, filters and directory. The screen specifications remain authoritative pending confirmation.
+- Evidence: `resources/StreamPlay_2_0_alle_33_designs/04_Live_TV_overzicht.jpg`; `resources/StreamPlay_2_0_alle_33_designs/05_Live_TV_player.jpg`; `resources/StreamPlay_2_0_Specificaties/schermen/04_04_Live_TV_overzicht.md:10`; `resources/StreamPlay_2_0_Specificaties/schermen/05_05_Live_TV_player.md:10`. The images also depict unsupported viewer counts, 4K/HDR/Atmos badges and “Kijk vanaf begin”.
+- Options: Correct the design filenames; or keep filenames and explicitly document the cross-reference.
+- Owner-only: yes.
+- Blocks: SP-04, SP-05.
+
+## OQ-014 — Accent swatches on Appearance mockup
+
+- Question: Are the six accent swatches in the SP-26 mockup intended for v2? The spec lists three official themes and a Space override but no accent selection interaction.
+- Evidence: `resources/StreamPlay_2_0_alle_33_designs/26_Appearance.jpg`; `resources/StreamPlay_2_0_Specificaties/schermen/26_26_Appearance.md:30-35`; `resources/StreamPlay_2_0_Specificaties/guides/BUILD_EN_STYLE_GUIDE.md`. The dark Studio Light crop and broken icon glyphs are mockup defects.
+- Options: Defer accents; or add an explicit theme-token and BDD contract after ADR-013 review.
+- Owner-only: yes.
+- Blocks: SP-26, ADR-013.

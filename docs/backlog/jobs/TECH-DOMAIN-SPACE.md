@@ -1,13 +1,13 @@
 # TECH-DOMAIN-SPACE — Domain Space
 
 ## Goal
-Deliver the domain space contract for StreamPlay 2.0. Establish testable behavior and reviewable boundaries before dependent jobs use it.
+Define stable Space IDs and scoped preferences, favorites and content selection after ADR-005. The output establishes an independently reviewable contract for downstream jobs.
 
 ## Inputs
 - Specs: resources/StreamPlay_2_0_Specificaties/guides/DATA_EN_CONTENT_MODELLEN.md; resources/StreamPlay_2_0_Specificaties/schermen/21_21_Spaces_overzicht.md
 - Design: none — no UI reference required.
 - ADRs: ADR-001, ADR-002, ADR-003, ADR-004, ADR-012, ADR-005
-- Legacy reference: ~/Projects/iptv/README.md (README.md:1 @ 7469f2a): characterize observable domain space behavior; use synthetic fixtures.
+- Legacy reference: ~/Projects/iptv/README.md (README.md:3 @ 7469f2a): characterize observable domain space behavior; use synthetic fixtures.
 
 ## Scope
 - In: Define stable Space IDs and scoped preferences, favorites and content selection after ADR-005. Provide fake ports, isolation tests and conflict behavior for switch, create, archive and restore.
@@ -16,7 +16,7 @@ Deliver the domain space contract for StreamPlay 2.0. Establish testable behavio
 ## Behavior (BDD)
 - Feature file(s): features/space_management.feature
 - Scenarios to make pass: DOM-SPACE_MANAGEMENT-INV-01
-- Additional scenarios (from the 10 categories in BDD_STRATEGIE.md) that this job must add: happy path, empty data, partial error/offline, unavailable capability, boundary data, keyboard/a11y, restoration/persistence, multispace isolation, concurrency/undo where relevant, migration compatibility.
+- Additional scenarios (from the 10 categories in BDD_STRATEGIE.md) that this job must add: happy path — satisfy the listed invariant; boundary data — verify IDs and conflicts; partial error/offline — retain valid state
 
 ## Domain contract
 Indicative SpaceRepository and SpacePreferences ports use stable Space UUIDs. Favorite key is (spaceId, itemId); Space owns content choice and category overrides; switching Space cannot leak personal state. Names are indicative. Apply DATA_EN_CONTENT_MODELLEN.md invariants for stable IDs, provenance, Space isolation and versioned conflicts where relevant.
@@ -30,6 +30,7 @@ Space-management BDD, property tests for isolation, adapter integration, fmt, cl
 ## Definition of done
 - [ ] Red test evidence captured before implementation.
 - [ ] Named and additional scenarios pass with synthetic fixtures.
+- [ ] Three-theme screenshots are not applicable because this job delivers no UI.
 - [ ] No P0/P1 review issue remains.
 - [ ] Related docs, traceability and ADR evidence are updated.
 

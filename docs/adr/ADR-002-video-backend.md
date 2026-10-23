@@ -8,19 +8,19 @@ Choose the playback backend and licensing/codec approach.
 
 ## Options
 
-- **libmpv::** libmpv preserves v1 codec and track behavior but requires an explicit native-library licence and update inventory.
-- **GStreamer or platform-native video::** GStreamer/platform backends may ease some platform integration but need format/track parity probes and distinct packaging.
+- **libmpv:** libmpv preserves v1 codec and track behavior but requires an explicit native-library licence and update inventory.
+- **GStreamer or platform-native video:** GStreamer/platform backends may ease some platform integration but need format/track parity probes and distinct packaging.
 
 ## Evidence
 
-- v1: `crates/playback/src/lib.rs:1 @ 7469f2a`. This establishes prior behavior, not v2 approval.
-- Staged player: `crates/playback/src/controller.rs:1 @ 869ce22`; scope and maturity need a live audit.
+- v1: `crates/playback/src/lib.rs:20 @ 7469f2a`. This establishes prior behavior, not v2 approval.
+- Staged player: `crates/playback/src/controller.rs:9 @ 869ce22`; scope and maturity need a live audit.
 - Specs: `resources/StreamPlay_2_0_Specificaties/guides/BESLISSINGEN_EN_RISICOS.md:7` and `resources/StreamPlay_2_0_Specificaties/guides/TECHNISCHE_ARCHITECTUUR.md`.
 - **owner decision in v1, needs confirmation for v2** (`HANDOVER.md:38`): “GPL-3.0-or-later and policy Markdown files are already established in the public repo. Do not reopen the licensing discussion.”
 
 ## Recommendation
 
-Investigate libmpv through the named POC and owner review. Preserve the alternative until the evidence and licensing/compatibility checks are complete.
+Prefer **libmpv**. It has the closest characterized route to v1 playback and track behavior; TECH-POC-PLAYER must prove platform and licence viability. This remains a proposal for owner decision.
 
 ## Blocked until decided
 
