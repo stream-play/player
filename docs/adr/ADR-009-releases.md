@@ -13,7 +13,7 @@ Set signing, notarization and platform distribution policy.
 
 ## Evidence
 
-- v1: `README.md:3 @ 7469f2a`. This establishes prior behavior, not v2 approval.
+- v1: `scripts/build-macos.sh:42-63 @ 7469f2a` selects a redacted signing identity and signs/verifies the bundle; `scripts/build-windows.sh:32-54 @ 7469f2a` builds and stages the Windows executable. These establish prior behavior, not v2 approval.
 - Specs: `resources/StreamPlay_2_0_Specificaties/guides/BESLISSINGEN_EN_RISICOS.md:14` and `resources/StreamPlay_2_0_Specificaties/guides/TECHNISCHE_ARCHITECTUUR.md`.
 - **owner decision in v1, needs confirmation for v2** (`HANDOVER.md:25`): “Target **macOS Apple Silicon** and **Windows x64 MSVC**. Linux is deferred.”
 - **owner decision in v1, needs confirmation for v2** (`HANDOVER.md:37`): “No publisher signing/notarization for initial releases. Local preview bundles have used ad-hoc signing only.”

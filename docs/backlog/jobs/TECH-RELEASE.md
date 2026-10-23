@@ -7,7 +7,7 @@ Package approved target-platform builds with versioned native-library inventory,
 - Specs: resources/StreamPlay_2_0_Specificaties/factory/INITIATIVES_EN_JOB_BACKLOG.md; resources/StreamPlay_2_0_Specificaties/guides/BESLISSINGEN_EN_RISICOS.md
 - Design: none — no UI reference required.
 - ADRs: ADR-009
-- Legacy reference: ~/Projects/iptv/README.md (README.md:3 @ 7469f2a): characterize observable release behavior; use synthetic fixtures.
+- Legacy reference: `~/Projects/iptv` (`scripts/build-macos.sh:42-63 @ 7469f2a`; `scripts/build-windows.sh:32-54 @ 7469f2a`): characterize the observable behavior; use synthetic fixtures.
 
 ## Scope
 - In: Package approved target-platform builds with versioned native-library inventory, migration backup/rollback, clean-machine install and update path. Apply owner-approved signing/notarization policy from ADR-009.

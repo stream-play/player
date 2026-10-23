@@ -7,10 +7,10 @@ Implement three official theme token sets, Asap Sharp loading/fallback, pinned P
 - Specs: resources/StreamPlay_2_0_Specificaties/guides/BUILD_EN_STYLE_GUIDE.md; resources/StreamPlay_2_0_Specificaties/guides/TECHNISCHE_ARCHITECTUUR.md
 - Design: resources/StreamPlay_2_0_alle_33_designs/00_Overzicht_33_schermen.jpg; resources/StreamPlay_2_0_alle_33_designs/26_Appearance.jpg; resources/StreamPlay_2_0_alle_33_designs/21_Spaces_overzicht.jpg; resources/StreamPlay_2_0_alle_33_designs/04_Live_TV_overzicht.jpg — take the three-theme intent, sidebar/topbar hierarchy, active-nav pill, Space switcher and traffic-light placement. Ignore 26’s broken glyph boxes and dark “Studio Light” crop, plus fictional provider/media data in 21 and 04. Theme tokens and chrome behavior come from the style guide and ADRs, not these mockups.
 - ADRs: ADR-001, ADR-002, ADR-003, ADR-004, ADR-012, ADR-010, ADR-011
-- Legacy reference: ~/Projects/iptv/crates/desktop/src/theme.rs (crates/desktop/src/theme.rs:6 @ 7469f2a): characterize observable design system behavior; use synthetic fixtures.
+- Legacy reference: `~/Projects/iptv/player/crates/desktop/assets/manifest.json:2-9,275-277 @ 869ce22` (pinned upstream Asap Sharp source and asset hashes); derive static Regular/SemiBold instances from `Omnibus-Type/Asap_Sharp @ 41d013ad7c374fd7fc3f5fc99571b582020d509b`, source `fonts/VARIABLE/AsapSharp[wdth,wght].ttf`, and ship upstream `OFL.txt`. ProIcons source: `resources/proicons @ 1c810f0`; use synthetic fixtures.
 
 ## Scope
-- In: Implement three official theme token sets, Asap Sharp loading/fallback, pinned ProIcons registry, accessible primitives, app shell and approved window chrome. Publish stable component and token APIs.
+- In: Implement three official theme token sets; re-derive static Asap Sharp Regular and SemiBold instances from `Omnibus-Type/Asap_Sharp @ 41d013ad7c374fd7fc3f5fc99571b582020d509b` variable font at `fonts/VARIABLE/AsapSharp[wdth,wght].ttf`, and ship its `OFL.txt`; source ProIcons from `resources/proicons @ 1c810f0`; implement accessible primitives, app shell and approved window chrome. Publish stable component and token APIs.
 - Out: No custom-theme editor, fabricated media or screen-specific business flows.
 
 ## Behavior (BDD)
