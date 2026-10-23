@@ -1,0 +1,1062 @@
+initiative: STREAMPLAY-2-REBUILD
+jobs:
+- id: TECH-AUDIT-LEGACY
+  title: Audit Legacy
+  file: docs/backlog/jobs/TECH-AUDIT-LEGACY.md
+  milestone: 0
+  requirements: []
+  dependsOn: []
+  priority: 10
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr: &id001 []
+- id: TECH-POC-GUI
+  title: Poc Gui
+  file: docs/backlog/jobs/TECH-POC-GUI.md
+  milestone: 0
+  requirements: []
+  dependsOn:
+  - TECH-AUDIT-LEGACY
+  priority: 10
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: *id001
+- id: TECH-POC-PLAYER
+  title: Poc Player
+  file: docs/backlog/jobs/TECH-POC-PLAYER.md
+  milestone: 0
+  requirements: []
+  dependsOn:
+  - TECH-AUDIT-LEGACY
+  priority: 10
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr: *id001
+- id: TECH-ADR-BASE
+  title: Adr Base
+  file: docs/backlog/jobs/TECH-ADR-BASE.md
+  milestone: 0
+  requirements: []
+  dependsOn:
+  - TECH-AUDIT-LEGACY
+  - TECH-POC-GUI
+  - TECH-POC-PLAYER
+  priority: 10
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr: *id001
+- id: TECH-RUST-WORKSPACE
+  title: Rust Workspace
+  file: docs/backlog/jobs/TECH-RUST-WORKSPACE.md
+  milestone: 1
+  requirements: []
+  dependsOn:
+  - TECH-POC-GUI
+  - TECH-POC-PLAYER
+  - TECH-ADR-BASE
+  priority: 10
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr:
+  - ADR-001
+  - ADR-002
+  - ADR-003
+  - ADR-004
+  - ADR-012
+- id: TECH-DESIGN-SYSTEM
+  title: Design System
+  file: docs/backlog/jobs/TECH-DESIGN-SYSTEM.md
+  milestone: 1
+  requirements: []
+  dependsOn:
+  - TECH-POC-GUI
+  - TECH-POC-PLAYER
+  - TECH-ADR-BASE
+  - TECH-RUST-WORKSPACE
+  priority: 9
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr:
+  - ADR-001
+  - ADR-002
+  - ADR-003
+  - ADR-004
+  - ADR-012
+  - ADR-010
+  - ADR-011
+- id: TECH-DOMAIN-SPACE
+  title: Domain Space
+  file: docs/backlog/jobs/TECH-DOMAIN-SPACE.md
+  milestone: 1
+  requirements: []
+  dependsOn:
+  - TECH-POC-GUI
+  - TECH-POC-PLAYER
+  - TECH-ADR-BASE
+  - TECH-RUST-WORKSPACE
+  priority: 7
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr:
+  - ADR-001
+  - ADR-002
+  - ADR-003
+  - ADR-004
+  - ADR-012
+  - ADR-005
+- id: TECH-DOMAIN-CATALOG
+  title: Domain Catalog
+  file: docs/backlog/jobs/TECH-DOMAIN-CATALOG.md
+  milestone: 1
+  requirements: []
+  dependsOn:
+  - TECH-POC-GUI
+  - TECH-POC-PLAYER
+  - TECH-ADR-BASE
+  - TECH-RUST-WORKSPACE
+  priority: 9
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr:
+  - ADR-001
+  - ADR-002
+  - ADR-003
+  - ADR-004
+  - ADR-012
+- id: TECH-DOMAIN-PLAYLIST
+  title: Domain Playlist
+  file: docs/backlog/jobs/TECH-DOMAIN-PLAYLIST.md
+  milestone: 1
+  requirements: []
+  dependsOn:
+  - TECH-POC-GUI
+  - TECH-POC-PLAYER
+  - TECH-ADR-BASE
+  - TECH-RUST-WORKSPACE
+  priority: 7
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr:
+  - ADR-001
+  - ADR-002
+  - ADR-003
+  - ADR-004
+  - ADR-012
+- id: TECH-DOMAIN-EPG
+  title: Domain Epg
+  file: docs/backlog/jobs/TECH-DOMAIN-EPG.md
+  milestone: 1
+  requirements: []
+  dependsOn:
+  - TECH-POC-GUI
+  - TECH-POC-PLAYER
+  - TECH-ADR-BASE
+  - TECH-RUST-WORKSPACE
+  priority: 7
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr:
+  - ADR-001
+  - ADR-002
+  - ADR-003
+  - ADR-004
+  - ADR-012
+- id: TECH-DOMAIN-PLAYBACK
+  title: Domain Playback
+  file: docs/backlog/jobs/TECH-DOMAIN-PLAYBACK.md
+  milestone: 1
+  requirements: []
+  dependsOn:
+  - TECH-POC-GUI
+  - TECH-POC-PLAYER
+  - TECH-ADR-BASE
+  - TECH-RUST-WORKSPACE
+  priority: 7
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr:
+  - ADR-001
+  - ADR-002
+  - ADR-003
+  - ADR-004
+  - ADR-012
+- id: TECH-DOMAIN-CATEGORY
+  title: Domain Category
+  file: docs/backlog/jobs/TECH-DOMAIN-CATEGORY.md
+  milestone: 1
+  requirements: []
+  dependsOn:
+  - TECH-POC-GUI
+  - TECH-POC-PLAYER
+  - TECH-ADR-BASE
+  - TECH-DOMAIN-CATALOG
+  priority: 9
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr:
+  - ADR-001
+  - ADR-002
+  - ADR-003
+  - ADR-004
+  - ADR-012
+- id: TECH-PERSISTENCE
+  title: Persistence
+  file: docs/backlog/jobs/TECH-PERSISTENCE.md
+  milestone: 1
+  requirements: []
+  dependsOn:
+  - TECH-POC-GUI
+  - TECH-POC-PLAYER
+  - TECH-ADR-BASE
+  - TECH-DOMAIN-SPACE
+  - TECH-DOMAIN-CATALOG
+  - TECH-DOMAIN-CATEGORY
+  - TECH-DOMAIN-PLAYLIST
+  - TECH-DOMAIN-EPG
+  priority: 9
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr:
+  - ADR-001
+  - ADR-002
+  - ADR-003
+  - ADR-004
+  - ADR-012
+- id: TECH-INTEGRATION-PIPELINE
+  title: Integration Pipeline
+  file: docs/backlog/jobs/TECH-INTEGRATION-PIPELINE.md
+  milestone: 1
+  requirements: []
+  dependsOn:
+  - TECH-POC-GUI
+  - TECH-POC-PLAYER
+  - TECH-ADR-BASE
+  - TECH-PERSISTENCE
+  - TECH-DOMAIN-PLAYLIST
+  - TECH-DOMAIN-EPG
+  - TECH-DOMAIN-CATEGORY
+  priority: 9
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr:
+  - ADR-001
+  - ADR-002
+  - ADR-003
+  - ADR-004
+  - ADR-012
+- id: SP-21
+  title: Spaces-overzicht
+  file: docs/backlog/jobs/SP-21.md
+  milestone: 2
+  requirements:
+  - SP-21
+  dependsOn:
+  - TECH-DESIGN-SYSTEM
+  - TECH-DOMAIN-SPACE
+  - TECH-PERSISTENCE
+  priority: 8
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr:
+  - ADR-005
+- id: SP-22
+  title: Space-editor
+  file: docs/backlog/jobs/SP-22.md
+  milestone: 2
+  requirements:
+  - SP-22
+  dependsOn:
+  - SP-21
+  priority: 8
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr:
+  - ADR-005
+- id: SP-24
+  title: Playlists & providers
+  file: docs/backlog/jobs/SP-24.md
+  milestone: 2
+  requirements:
+  - SP-24
+  dependsOn:
+  - SP-22
+  - TECH-INTEGRATION-PIPELINE
+  priority: 8
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-04
+  title: Live TV-overzicht
+  file: docs/backlog/jobs/SP-04.md
+  milestone: 2
+  requirements:
+  - SP-04
+  dependsOn:
+  - SP-24
+  - TECH-INTEGRATION-PIPELINE
+  priority: 7
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-05
+  title: Live TV-player
+  file: docs/backlog/jobs/SP-05.md
+  milestone: 2
+  requirements:
+  - SP-05
+  dependsOn:
+  - SP-04
+  - TECH-DOMAIN-PLAYBACK
+  priority: 7
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-06
+  title: Volledige EPG
+  file: docs/backlog/jobs/SP-06.md
+  milestone: 2
+  requirements:
+  - SP-06
+  dependsOn:
+  - SP-05
+  - TECH-DOMAIN-EPG
+  priority: 7
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-07
+  title: Geïntegreerde EPG
+  file: docs/backlog/jobs/SP-07.md
+  milestone: 2
+  requirements:
+  - SP-07
+  dependsOn:
+  - SP-06
+  priority: 7
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-02
+  title: Universeel zoeken
+  file: docs/backlog/jobs/SP-02.md
+  milestone: 3
+  requirements:
+  - SP-02
+  dependsOn:
+  - SP-24
+  - TECH-DOMAIN-CATALOG
+  - TECH-DESIGN-SYSTEM
+  priority: 6
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-03
+  title: Zoekresultaten
+  file: docs/backlog/jobs/SP-03.md
+  milestone: 3
+  requirements:
+  - SP-03
+  dependsOn:
+  - SP-02
+  - TECH-DESIGN-SYSTEM
+  priority: 4
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-09
+  title: Filmcatalogus
+  file: docs/backlog/jobs/SP-09.md
+  milestone: 3
+  requirements:
+  - SP-09
+  dependsOn:
+  - SP-08
+  - TECH-DESIGN-SYSTEM
+  priority: 6
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-10
+  title: Filmdetails
+  file: docs/backlog/jobs/SP-10.md
+  milestone: 3
+  requirements:
+  - SP-10
+  dependsOn:
+  - SP-09
+  - TECH-DESIGN-SYSTEM
+  priority: 6
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr:
+  - ADR-006
+- id: SP-11
+  title: Filmplayer
+  file: docs/backlog/jobs/SP-11.md
+  milestone: 3
+  requirements:
+  - SP-11
+  dependsOn:
+  - SP-10
+  - TECH-DOMAIN-PLAYBACK
+  - TECH-DESIGN-SYSTEM
+  priority: 6
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-08
+  title: Films ontdekken
+  file: docs/backlog/jobs/SP-08.md
+  milestone: 3
+  requirements:
+  - SP-08
+  dependsOn:
+  - SP-24
+  - TECH-DESIGN-SYSTEM
+  priority: 6
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-13
+  title: Seriecatalogus
+  file: docs/backlog/jobs/SP-13.md
+  milestone: 3
+  requirements:
+  - SP-13
+  dependsOn:
+  - SP-12
+  - TECH-DESIGN-SYSTEM
+  priority: 6
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-14
+  title: Seriedetails
+  file: docs/backlog/jobs/SP-14.md
+  milestone: 3
+  requirements:
+  - SP-14
+  dependsOn:
+  - SP-13
+  - TECH-DESIGN-SYSTEM
+  priority: 6
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr:
+  - ADR-006
+- id: SP-15
+  title: Afleveringsplayer
+  file: docs/backlog/jobs/SP-15.md
+  milestone: 3
+  requirements:
+  - SP-15
+  dependsOn:
+  - SP-14
+  - TECH-DOMAIN-PLAYBACK
+  - TECH-DESIGN-SYSTEM
+  priority: 6
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-12
+  title: Series ontdekken
+  file: docs/backlog/jobs/SP-12.md
+  milestone: 3
+  requirements:
+  - SP-12
+  dependsOn:
+  - SP-24
+  - TECH-DESIGN-SYSTEM
+  priority: 4
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-16
+  title: Favorieten
+  file: docs/backlog/jobs/SP-16.md
+  milestone: 3
+  requirements:
+  - SP-16
+  dependsOn:
+  - SP-24
+  - TECH-DESIGN-SYSTEM
+  priority: 4
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-17
+  title: Verder kijken
+  file: docs/backlog/jobs/SP-17.md
+  milestone: 3
+  requirements:
+  - SP-17
+  dependsOn:
+  - SP-11
+  - SP-15
+  - TECH-DESIGN-SYSTEM
+  priority: 6
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-01
+  title: Home-dashboard
+  file: docs/backlog/jobs/SP-01.md
+  milestone: 3
+  requirements:
+  - SP-01
+  dependsOn:
+  - SP-02
+  - SP-16
+  - SP-17
+  - TECH-DESIGN-SYSTEM
+  priority: 6
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-18
+  title: Downloads
+  file: docs/backlog/jobs/SP-18.md
+  milestone: 3
+  requirements:
+  - SP-18
+  dependsOn:
+  - SP-24
+  - TECH-DESIGN-SYSTEM
+  priority: 4
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr:
+  - ADR-007
+- id: SP-19-20
+  title: MultiView-dashboard / MultiView-indeling
+  file: docs/backlog/jobs/SP-19-20.md
+  milestone: 4
+  requirements:
+  - SP-19
+  - SP-20
+  dependsOn:
+  - SP-05
+  - TECH-DOMAIN-PLAYBACK
+  - TECH-DESIGN-SYSTEM
+  priority: 4
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr:
+  - ADR-008
+- id: SP-23
+  title: Profiel & notificaties
+  file: docs/backlog/jobs/SP-23.md
+  milestone: 4
+  requirements:
+  - SP-23
+  dependsOn:
+  - SP-21
+  - TECH-DESIGN-SYSTEM
+  priority: 4
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr:
+  - ADR-014
+- id: SP-25
+  title: EPG-instellingen
+  file: docs/backlog/jobs/SP-25.md
+  milestone: 4
+  requirements:
+  - SP-25
+  dependsOn:
+  - SP-06
+  - TECH-DESIGN-SYSTEM
+  priority: 4
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-26
+  title: Appearance
+  file: docs/backlog/jobs/SP-26.md
+  milestone: 4
+  requirements:
+  - SP-26
+  dependsOn:
+  - TECH-DESIGN-SYSTEM
+  priority: 4
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr:
+  - ADR-013
+- id: SP-27
+  title: Ondertiteling & audio
+  file: docs/backlog/jobs/SP-27.md
+  milestone: 4
+  requirements:
+  - SP-27
+  dependsOn:
+  - SP-11
+  - TECH-DESIGN-SYSTEM
+  priority: 4
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr:
+  - ADR-002
+- id: SP-28
+  title: Discovery & metadata
+  file: docs/backlog/jobs/SP-28.md
+  milestone: 4
+  requirements:
+  - SP-28
+  dependsOn:
+  - SP-10
+  - TECH-DESIGN-SYSTEM
+  priority: 4
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr:
+  - ADR-006
+- id: SP-29
+  title: Library & About
+  file: docs/backlog/jobs/SP-29.md
+  milestone: 4
+  requirements:
+  - SP-29
+  dependsOn:
+  - SP-24
+  - TECH-DESIGN-SYSTEM
+  priority: 4
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-30
+  title: Configuratie-dashboard
+  file: docs/backlog/jobs/SP-30.md
+  milestone: 4
+  requirements:
+  - SP-30
+  dependsOn:
+  - SP-24
+  - SP-22
+  - TECH-DESIGN-SYSTEM
+  priority: 4
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-31-32
+  title: Categorieën- en genrebeheer / Categorie-/genre-editor
+  file: docs/backlog/jobs/SP-31-32.md
+  milestone: 4
+  requirements:
+  - SP-31
+  - SP-32
+  dependsOn:
+  - SP-30
+  - TECH-DOMAIN-CATEGORY
+  - TECH-DESIGN-SYSTEM
+  priority: 4
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: SP-33
+  title: Contentregels en categoriekoppelingen
+  file: docs/backlog/jobs/SP-33.md
+  milestone: 4
+  requirements:
+  - SP-33
+  dependsOn:
+  - SP-31-32
+  - TECH-DESIGN-SYSTEM
+  priority: 4
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: []
+- id: TECH-MIGRATION
+  title: Migration
+  file: docs/backlog/jobs/TECH-MIGRATION.md
+  milestone: 5
+  requirements: []
+  dependsOn:
+  - TECH-PERSISTENCE
+  - TECH-AUDIT-LEGACY
+  priority: 2
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr:
+  - ADR-003
+- id: TECH-PERF
+  title: Perf
+  file: docs/backlog/jobs/TECH-PERF.md
+  milestone: 5
+  requirements: []
+  dependsOn:
+  - SP-19-20
+  - TECH-INTEGRATION-PIPELINE
+  priority: 2
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr: *id001
+- id: TECH-SECURITY
+  title: Security
+  file: docs/backlog/jobs/TECH-SECURITY.md
+  milestone: 5
+  requirements: []
+  dependsOn:
+  - TECH-INTEGRATION-PIPELINE
+  - SP-18
+  - SP-28
+  priority: 2
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr: *id001
+- id: TECH-UX-REVIEW
+  title: Ux Review
+  file: docs/backlog/jobs/TECH-UX-REVIEW.md
+  milestone: 5
+  requirements: []
+  dependsOn:
+  - SP-21
+  - SP-22
+  - SP-24
+  - SP-04
+  - SP-05
+  - SP-06
+  - SP-07
+  - SP-02
+  - SP-03
+  - SP-09
+  - SP-10
+  - SP-11
+  - SP-08
+  - SP-13
+  - SP-14
+  - SP-15
+  - SP-12
+  - SP-16
+  - SP-17
+  - SP-01
+  - SP-18
+  - SP-19-20
+  - SP-23
+  - SP-25
+  - SP-26
+  - SP-27
+  - SP-28
+  - SP-29
+  - SP-30
+  - SP-31-32
+  - SP-33
+  priority: 5
+  complexity: complex
+  hasUi: true
+  reviewers:
+  - security
+  - ux
+  - ui-design
+  - code
+  skipReasons: {}
+  blockedByAdr: *id001
+- id: TECH-RELEASE
+  title: Release
+  file: docs/backlog/jobs/TECH-RELEASE.md
+  milestone: 5
+  requirements: []
+  dependsOn:
+  - TECH-MIGRATION
+  - TECH-PERF
+  - TECH-SECURITY
+  - TECH-UX-REVIEW
+  priority: 5
+  complexity: complex
+  hasUi: false
+  reviewers:
+  - security
+  - code
+  skipReasons:
+    ux: No user-facing change
+    ui-design: No user-facing change
+  blockedByAdr:
+  - ADR-009
